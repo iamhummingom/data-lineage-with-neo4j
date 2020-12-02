@@ -5,7 +5,7 @@ This project helps to see the data lineage.
 With csv files as input nodes and relationships are created for columns and tables to improve the visualization.
 
 ## Data Model
-![alt text](images/data_model.png "DataModel")
+![DataModel](https://github.com/iamhummingom/data-lineage-with-neo4j/blob/master/images/data_model.PNG)
 
 
 
