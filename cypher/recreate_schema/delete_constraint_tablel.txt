@@ -1,0 +1,2 @@
+// delete constraints table
+DROP CONSTRAINT ON (t:Table) ASSERT t.name IS UNIQUE;

@@ -1,0 +1,12 @@
+// Load.
+LOAD CSV WITH HEADERS 
+FROM "file:///column_relation.csv" AS line
+WITH line
+WHERE line.Source_Table <> line.Target_Table 
+MATCH (sourcecolumn:Column { name: line.Source_Column })
+MATCH (sourcecolumn)-[:BELONGS_TO]->(sourcetable:Table{ name: line.Source_Table })
+MATCH (targetcolumn:Column { name: line.Target_Column })
+MATCH (targetcolumn)-[:BELONGS_TO]->(targettable:Table{ name: line.Target_Table })
+
+MERGE (sourcetable)-[:NEXT]->(targettable)
+;

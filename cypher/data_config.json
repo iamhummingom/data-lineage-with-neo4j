@@ -1,0 +1,15 @@
+{
+  "load": [
+    "cypher/load/load_table_columns.txt",
+    "cypher/load/load_column_relationship.txt",
+    "cypher/load/load_table_relationship.txt",
+    "cypher/load/load_table_description.txt"
+  ],
+  "recreate_schema": [
+    "cypher/recreate_schema/delete_nodes_relationship.txt",
+    "cypher/recreate_schema/delete_constraint_column.txt",
+    "cypher/recreate_schema/delete_constraint_tablel.txt",
+    "cypher/recreate_schema/create_constraints_column.txt",
+    "cypher/recreate_schema/create_constraints_table.txt"
+  ]
+}

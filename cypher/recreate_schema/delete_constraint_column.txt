@@ -1,0 +1,2 @@
+// delete constraintscolumn
+DROP CONSTRAINT ON (c:Column) ASSERT c.name IS UNIQUE;

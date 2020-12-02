@@ -1,0 +1,2 @@
+// Uniqueness constraints.
+CREATE CONSTRAINT ON (c:Column) ASSERT c.name IS UNIQUE;

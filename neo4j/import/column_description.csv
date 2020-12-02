@@ -1,0 +1,8 @@
+Table,Column,Desc
+final_table,first_name, first name of the client
+final_table,last_name, last name of the client
+final_table,full_name, derived full name of the client
+final_table,email, email address of the client
+final_table,address, address of the client
+final_table,postcode, derived postcode from address
+final_table,city, derived city from address

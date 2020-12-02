@@ -1,0 +1,13 @@
+Process,Domain,Aplication,Table,Columns
+crm,business,etl,staging_table,first_name
+crm,business,etl,staging_table,last_name
+crm,business,etl,staging_table,email
+crm,business,etl,staging_table,address
+crm,business,etl,staging_table,age
+crm,business,etl,final_table,first_name
+crm,business,etl,final_table,last_name
+crm,business,etl,final_table,full_name
+crm,business,etl,final_table,email
+crm,business,etl,final_table,address
+crm,business,etl,final_table,postcode
+crm,business,etl,final_table,city

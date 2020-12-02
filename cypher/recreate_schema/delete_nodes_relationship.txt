@@ -1,0 +1,2 @@
+// delete nodes, relationships
+MATCH (n) DETACH DELETE n;

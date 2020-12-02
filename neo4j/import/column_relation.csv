@@ -1,0 +1,9 @@
+Source_Table,Source_Column,Target_Column,Target_Table
+staging_table,first_name,first_name,final_table
+staging_table,last_name,last_name,final_table
+staging_table,email,email,final_table
+staging_table,address,address,final_table
+staging_table,first_name,full_name,final_table
+staging_table,last_name,full_name,final_table
+staging_table,address,postcode,final_table
+staging_table,address,city,final_table

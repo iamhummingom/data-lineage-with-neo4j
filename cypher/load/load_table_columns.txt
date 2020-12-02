@@ -1,0 +1,12 @@
+// Load.
+LOAD CSV WITH HEADERS 
+FROM "file:///columns.csv" AS line
+WITH line
+WHERE line.Columns IS NOT NULL AND
+      line.Table IS NOT NULL
+
+MERGE (column:Column { name: line.Columns })
+MERGE (table:Table { name: line.Table })
+
+MERGE (column)-[:BELONGS_TO]->(table)
+;

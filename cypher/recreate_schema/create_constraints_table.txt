@@ -1,0 +1,2 @@
+// Uniqueness constraints.
+CREATE CONSTRAINT ON (t:Table) ASSERT t.name IS UNIQUE;

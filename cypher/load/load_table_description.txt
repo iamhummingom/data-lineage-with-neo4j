@@ -1,0 +1,11 @@
+// 5. Load Table Description
+LOAD CSV WITH HEADERS 
+FROM "file:///column_description.csv" AS line
+WITH line
+WHERE line.Table is not null
+and line.Column is not null
+and line.Desc is not null 
+MATCH (sourcecolumn:Column { name: line.Column })
+MATCH (sourcecolumn)-[:BELONGS_TO]->(sourcetable:Table{ name: line.Table })
+SET sourcecolumn.description=line.Desc
+;
