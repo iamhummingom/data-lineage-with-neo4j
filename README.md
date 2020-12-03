@@ -14,6 +14,7 @@ With csv files as input nodes and relationships are created for columns and tabl
 #### neo4j:
 
 - Run neo4j container`docker run --rm --name neo4j -p 7474:7474 -p 7687:7687 -v $PWD/neo4j/data:/data -v $PWD/neo4j/import:/import neo4j`
+- For local run the auth can be skipped - `docker run --rm --name neo4j --env NEO4J_AUTH=none -p 7474:7474 -p 7687:7687 -v ${PWD}/neo4j/data:/data -v ${PWD}/neo4j/import:/import neo4j`
 - graph db will be available at - http://localhost:7474/
 - Stop container: `docker stop neo4j`
 - Remove image: `docker rmi neo4j`
@@ -30,6 +31,7 @@ With csv files as input nodes and relationships are created for columns and tabl
 
 #### neo4j:
 - Run neo4j container`docker run --rm --name neo4j -p 7474:7474 -p 7687:7687 -v %CD%/neo4j/data:/data -v %CD%/neo4j/import:/import neo4j`
+- For local run the auth can be skipped - `docker run --rm --name neo4j --env NEO4J_AUTH=none -p 7474:7474 -p 7687:7687 -v %CD%/neo4j/data:/data -v %CD%/neo4j/import:/import neo4j`
 - graph db will be available at - http://localhost:7474/
 - Stop container: `docker stop neo4j`
 - Remove image: `docker rmi neo4j`
@@ -46,7 +48,7 @@ With csv files as input nodes and relationships are created for columns and tabl
 | Variable | Description            |   Default  | Required 
 |----------|------------------------|:----------:|:--------:
 | `RECREATE_SCHEMA` | To receate the schema. Allowed value : [True/False]  |    False       |    no   | 
-| `TRIGGER_STATUS`| neo4j password - first time its neo4j, after that it needs tobe changed as saved in variable            |    -       |    yes   |
+| `NEO4J_PASSWORD`| neo4j password - first time its neo4j, after that it needs tobe changed as saved in variable            |    -       |    yes   |
 
 ## Sample questions to ask from your data
 #### Show me all column descriptions

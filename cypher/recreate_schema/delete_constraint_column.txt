@@ -1,2 +1,2 @@
 // delete constraintscolumn
-DROP CONSTRAINT ON (c:Column) ASSERT c.name IS UNIQUE;
+DROP CONSTRAINT unique_column IF EXISTS;

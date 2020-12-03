@@ -1,0 +1,2 @@
+// delete constraints table
+DROP CONSTRAINT unique_table IF EXISTS;

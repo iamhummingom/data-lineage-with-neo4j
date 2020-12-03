@@ -1,0 +1,2 @@
+// Uniqueness constraints.
+CREATE CONSTRAINT unique_table IF NOT EXISTS ON (t:Table) ASSERT t.name IS UNIQUE;

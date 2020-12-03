@@ -42,15 +42,25 @@ def load_data():
     session = driver.session()
     with open("cypher/data_config.json") as input_file:
         data_config = json.loads(input_file.read(), object_pairs_hook=OrderedDict)
-    if strtobool(os.getenv("RECREATE_SCHEMA", "False")) == 1:
+    if strtobool(os.getenv("RECREATE_SCHEMA", "False")):
         for script in data_config["recreate_schema"]:
+            try:
+                query = get_query(script)
+                log.info(f'running script : {script}')
+                session.run(query)
+            except Exception as e:
+                log.exception(e)
+                log.error("Failed to recreate schema")
+                raise
+    for script in data_config["load"]:
+        try;
             query = get_query(script)
             log.info(f'running script : {script}')
             session.run(query)
-    for script in data_config["load"]:
-        query = get_query(script)
-        log.info(f'running script : {script}')
-        session.run(query)
+        except Exception as e:
+            log.exception(e)
+            log.error("Failed to recreate schema")
+            raise
     log.info('Data loaded successfully')
 
 
